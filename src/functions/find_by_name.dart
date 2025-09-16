@@ -1,10 +1,15 @@
-import '../models/Atracctions.dart';
+import '../utils/Atracctions_list.dart';
 
-Attraction? findByName(List<Attraction> list, String name, {bool caseInsensitive = true}) {
-	return list.firstWhere(
+dynamic findByName(String name, {bool caseInsensitive = true}) {
+	 dynamic attraction = atracctionsList.firstWhere(
 		(a) => caseInsensitive
 				? a.name.toLowerCase() == name.toLowerCase()
 				: a.name == name,
-		orElse: () => null,
 	);
+
+  if (attraction != null) {
+    print('Encontrada: $attraction');
+  } else {
+    throw Exception('Attraction with name $name not found');
+  }
 }

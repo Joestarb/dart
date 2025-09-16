@@ -1,3 +1,5 @@
+import 'Atracctions.dart';
+
 class Itinerary {
   String name;
   DateTime startsAt;
@@ -11,10 +13,8 @@ class Itinerary {
     required this.attractions,
   });
 
-
-  @override  String toString() {
-    return '$name: ${attractions.length} atracciones, desde
-    ${startsAt.toLocal()} hasta ${endsAt.toLocal()}';
-
-}
+  @override
+  String toString() {
+    return '$name: ${attractions.length} atracciones, desde ${startsAt.toLocal()} hasta ${endsAt.toLocal()}';
+  }
 }

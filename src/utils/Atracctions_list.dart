@@ -29,11 +29,5 @@ final List<Attraction> atracctionsList = [
     familyFriendly: true,
     durationMin: 180,
   ),
-  Attraction(
-    name: 'Zona Rosa',
-    type: 'Entretenimiento',
-    price: 0.0,
-    familyFriendly: false,
-    durationMin: 60,
-  ),
+
 ];
